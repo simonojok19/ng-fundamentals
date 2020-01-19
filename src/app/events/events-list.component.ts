@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { EventService } from './shared/event.service';
 
 @Component({
   selector: 'app-events-list',
@@ -15,6 +16,9 @@ import { Component } from '@angular/core';
   `
 })
 export class EventsListComponent {
-
+  events: any[];
+  constructor(private eventService: EventService) {
+    this.events = this.eventService.getEvents();
+  }
 }
 
