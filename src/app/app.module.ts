@@ -12,6 +12,7 @@ import { RouterModule } from '@angular/router';
 import {appRoutes} from './routes';
 import {CreateEventComponent} from './events/create-event.component';
 import {Error404Component} from './errors/404.component';
+import {EventRouteActivator} from './events/event-details/event-route-activator.service';
 
 @NgModule({
   declarations: [
@@ -25,11 +26,12 @@ import {Error404Component} from './errors/404.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
   ],
   providers: [
     EventService,
-    ToastrService
+    ToastrService,
+    EventRouteActivator
   ],
   bootstrap: [AppComponent]
 })
