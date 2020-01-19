@@ -3,5 +3,6 @@ import {EventDetailsComponent} from './events/event-details/event-details.compon
 
 export const appRoutes = [
   { path: 'events', component: EventsListComponent },
-  { path: 'events/:id', component: EventDetailsComponent }
+  { path: 'events/:id', component: EventDetailsComponent },
+  { path: '', redirectTo: '/events', pathMatch: 'full' }
 ];
