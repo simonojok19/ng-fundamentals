@@ -7,7 +7,7 @@ import {NgModule} from '@angular/core';
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(userRoutes)
+    RouterModule.forChild(userRoutes)
   ],
   declarations: [
     ProfileComponent
