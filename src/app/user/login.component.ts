@@ -4,6 +4,8 @@ import { Component } from '@angular/core';
   templateUrl: './login.component.html'
 })
 export class LoginComponent {
+  userName;
+  password;
 
   login(formValues: any) {
     console.log(formValues);
