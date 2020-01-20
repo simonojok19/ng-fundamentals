@@ -12,4 +12,7 @@ export class AuthService {
       lastName: 'Peter'
     };
   }
+  isAuthenticated(): boolean {
+    return true;
+  }
 }
