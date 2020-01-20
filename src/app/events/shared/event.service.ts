@@ -4,7 +4,12 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class EventService {
   getEvents() {
-    return EVENTS;
+    const subject = new Subject();
+    setTimeout(() => {
+      subject.next(EVENTS);
+      subject.complete();
+    });
+    return subject;
   }
   getEvent(id: number) {
     return EVENTS.find(event => event.id === id);
