@@ -28,7 +28,7 @@
           <li>
             <a [routerLink]="['user/login']" *ngIf="!authService.isAuthenticated()">Login</a>
             <a [routerLink]="['user/profile']" *ngIf="authService.isAuthenticated()"
-            >Welcome {{ authService.currentUser.firstName }}</a>
+            >Welcome {{ authService.currentUser?.firstName }}</a>
           </li>
         </ul>
       </div>
