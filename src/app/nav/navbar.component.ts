@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import {AuthService} from '../user/auth.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +16,6 @@ import {AuthService} from '../user/auth.service';
 })
 export class NavBarComponent {
   constructor(public authService: AuthService) {
-    console.log(authService);
+    console.log(authService.isAuthenticated());
   }
 }

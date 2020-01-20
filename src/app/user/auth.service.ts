@@ -4,7 +4,9 @@ import {IUser} from './user.model';
 @Injectable()
 export class AuthService {
   currentUser: IUser;
+  isAuth = false;
   loginUser(userName: string, password: string) {
+    this.isAuth = !this.isAuth
     this.currentUser = {
       id: 1,
       userName,
@@ -13,6 +15,6 @@ export class AuthService {
     };
   }
   isAuthenticated() {
-    return true;
+    return this.isAuth;
   }
 }
