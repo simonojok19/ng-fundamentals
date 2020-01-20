@@ -38,6 +38,6 @@ import {EventRouteActivator} from './events/event-details/event-route-activator.
 })
 export class AppModule { }
 
-export function checkDirtyState() {
+export function checkDirtyState(component: CreateEventComponent) {
   return false;
 }
