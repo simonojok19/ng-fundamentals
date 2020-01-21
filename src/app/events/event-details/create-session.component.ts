@@ -47,4 +47,7 @@ export class CreateSessionComponent implements OnInit{
     };
     console.log(session);
   }
+  private restrictedWords(control: FormControl) {
+
+  }
 }
