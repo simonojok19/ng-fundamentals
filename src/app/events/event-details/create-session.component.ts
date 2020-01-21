@@ -4,6 +4,7 @@ import {ISession} from '../shared/event.model';
 import {restrictedWords} from '../shared/restricted-words.validators';
 
 @Component({
+  selector: 'app-create-session',
   templateUrl: './create-session.component.html',
   styles: [`
     em { float: right; color: #e05c65; padding-right: 10px; }
