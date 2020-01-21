@@ -38,4 +38,12 @@ export class ProfileComponent implements OnInit{
       this.cancel();
     }
   }
+
+  validateFirstName() {
+    return this.firstName.valid ||  this.firstName.touched;
+  }
+
+  validateLastName() {
+    return this.lastName.valid || this.lastName.touched;
+  }
 }
