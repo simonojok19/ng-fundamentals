@@ -13,13 +13,14 @@ import {ISession} from '../shared/event.model';
     .error :-ms-input-placeholder { color: #999 }
   `]
 })
-export class CreateSessionComponent implements OnInit{
-    name: FormControl;
-    presenter: FormControl;
-    duration: FormControl;
-    abstract: FormControl;
-    newSessionForm: FormGroup;
-    level: FormControl;
+export class CreateSessionComponent implements OnInit {
+  name: FormControl;
+  presenter: FormControl;
+  duration: FormControl;
+  abstract: FormControl;
+  newSessionForm: FormGroup;
+  level: FormControl;
+
   ngOnInit(): void {
     this.name = new FormControl('', Validators.required);
     this.presenter = new FormControl('', Validators.required);
@@ -28,7 +29,7 @@ export class CreateSessionComponent implements OnInit{
     this.abstract = new FormControl('', [
       Validators.required,
       Validators.maxLength(400),
-      this.restrictedWords
+      this.restrictedWords(['foo', 'bar'])
     ]);
     this.newSessionForm = new FormGroup({
       name: this.name,
@@ -51,7 +52,14 @@ export class CreateSessionComponent implements OnInit{
     };
     console.log(session);
   }
-  private restrictedWords(control: FormControl): {[key: string]: any} {
-    return control.value.includes('foo') ? { restrictedWords: 'foo'} : null;
+
+  private restrictedWords(words) {
+    return (control: FormControl): { [key: string]: any } => {
+      if (!words) {
+        return null;
+      }
+      const invalideWords = words.map(w => control.value.includes(w) ? w : null).filter(w => w != null);
+      return invalideWords && invalideWords.length > 0 ? {restrictedWords: invalideWords.join(', ')} : null;
+    };
   }
 }
