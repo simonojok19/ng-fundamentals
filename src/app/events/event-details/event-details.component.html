@@ -31,5 +31,5 @@
   </div>
 
   <hr/>
-  <app-session-list [sessions]="event?.sessions"></app-session-list>
+  <app-session-list *ngIf="!addMode" [sessions]="event?.sessions"></app-session-list>
 </div>
