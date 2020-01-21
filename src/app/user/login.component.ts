@@ -11,6 +11,7 @@ export class LoginComponent {
   constructor(private authService: AuthService, private router: Router) {}
 
   login(formValues: any) {
+    console.log(formValues);
     this.authService.loginUser(formValues.userName, formValues.password);
     this.router.navigate(['events']).then(r => console.log(r)).catch(e => console.log(e));
   }
