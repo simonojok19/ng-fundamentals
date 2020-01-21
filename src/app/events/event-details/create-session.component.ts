@@ -47,7 +47,7 @@ export class CreateSessionComponent implements OnInit{
     };
     console.log(session);
   }
-  private restrictedWords(control: FormControl) {
-
+  private restrictedWords(control: FormControl): {[key: string]: any} {
+    return control.value.includes('foo') ? { restrictedWords: 'foo'} : null;
   }
 }
