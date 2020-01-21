@@ -26,5 +26,6 @@ export class ProfileComponent implements OnInit{
 
   saveProfile(formValues: any) {
     this.authService.updateCurrentUser(formValues.firstName, formValues.lastName);
+    this.cancel();
   }
 }
