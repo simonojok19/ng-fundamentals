@@ -6,7 +6,7 @@ import {ISession} from '../shared/event.model';
   templateUrl: './create-session.component.html',
   styles: [`
     em { float: right; color: #e05c65; padding-right: 10px; }
-    .error input { background-color: #e3c3c5 }
+    .error input, .error select, .error textarea { background-color: #e3c3c5 }
     .error ::-webkit-input-placeholder { color: #999 }
     .error ::-moz-placeholder { color: #999 }
     .error :-moz-placeholder { color: #999 }
