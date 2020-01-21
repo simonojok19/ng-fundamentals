@@ -8,13 +8,19 @@ import {IEvent} from '../shared/event.model';
   styles: [`
     .container { padding-left: 20px; padding-right: 20px; }
     .image-event { height: 100px; }
+    a { cursor: pointer }
   `]
 })
 export class EventDetailsComponent implements OnInit {
   event: IEvent;
+  addMode: boolean;
   constructor(private eventService: EventService, private activatedRoute: ActivatedRoute) {
   }
   ngOnInit(): void {
     this.event = this.eventService.getEvent(+this.activatedRoute.snapshot.params.id);
+  }
+
+  addSession() {
+    this.addMode = true;
   }
 }
