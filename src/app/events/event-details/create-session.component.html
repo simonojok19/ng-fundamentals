@@ -2,7 +2,7 @@
   <h3>Create Session</h3>
 </div>
 <div class="col-md-6">
-  <form autocomplete="off">
+  <form autocomplete="off" [formGroup]="newSessionForm" (ngSubmit)="saveSession(newSessionForm.value)">
     <div class="form-group">
       <label for="sessionName">Session Name:</label>
       <input id="sessionName" type="text" class="form-control" placeholder="session name..." />

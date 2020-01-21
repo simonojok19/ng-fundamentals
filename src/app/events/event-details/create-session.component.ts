@@ -23,4 +23,7 @@ export class CreateSessionComponent implements OnInit{
     });
   }
 
+  saveSession(formValues: any) {
+    console.log(formValues);
+  }
 }
