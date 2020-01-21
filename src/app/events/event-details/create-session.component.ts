@@ -17,6 +17,7 @@ import {restrictedWords} from '../shared/restricted-words.validators';
 })
 export class CreateSessionComponent implements OnInit {
   @Output() saveNewSession = new EventEmitter();
+  @Output() cancelAddSession = new EventEmitter();
   name: FormControl;
   presenter: FormControl;
   duration: FormControl;
@@ -54,5 +55,9 @@ export class CreateSessionComponent implements OnInit {
       voters: []
     };
     this.saveNewSession.emit(session);
+  }
+
+  cancel() {
+
   }
 }
