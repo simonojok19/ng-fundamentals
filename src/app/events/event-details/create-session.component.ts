@@ -3,7 +3,15 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ISession} from '../shared/event.model';
 
 @Component({
-  templateUrl: './create-session.component.html'
+  templateUrl: './create-session.component.html',
+  styles: [`
+    em { float: right; color: #e05c65; padding-right: 10px; }
+    .error input { background-color: #e3c3c5 }
+    .error ::-webkit-input-placeholder { color: #999 }
+    .error ::-moz-placeholder { color: #999 }
+    .error :-moz-placeholder { color: #999 }
+    .error :-ms-input-placeholder { color: #999 }
+  `]
 })
 export class CreateSessionComponent implements OnInit{
     name: FormControl;
