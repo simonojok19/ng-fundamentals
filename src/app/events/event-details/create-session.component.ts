@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ISession} from '../shared/event.model';
 import {restrictedWords} from '../shared/restricted-words.validators';
@@ -16,6 +16,7 @@ import {restrictedWords} from '../shared/restricted-words.validators';
   `]
 })
 export class CreateSessionComponent implements OnInit {
+  @Output() saveNewSession = new EventEmitter();
   name: FormControl;
   presenter: FormControl;
   duration: FormControl;
@@ -52,6 +53,6 @@ export class CreateSessionComponent implements OnInit {
       presenter: formValues.presenter,
       voters: []
     };
-    console.log(session);
+    this.saveNewSession.emit(session);
   }
 }
