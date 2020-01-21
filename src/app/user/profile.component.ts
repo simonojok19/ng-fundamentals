@@ -5,9 +5,9 @@ import {FormControl, FormGroup} from '@angular/forms';
  templateUrl: './profile.component.html'
 })
 export class ProfileComponent implements OnInit{
-  private firstName: FormControl;
-  private lastName: FormControl;
-  private profileForm: FormGroup;
+  public firstName: FormControl;
+  public lastName: FormControl;
+  public profileForm: FormGroup;
   ngOnInit(): void {
     this.firstName = new FormControl();
     this.lastName = new FormControl();
