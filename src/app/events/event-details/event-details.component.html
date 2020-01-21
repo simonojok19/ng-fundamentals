@@ -32,5 +32,5 @@
 
   <hr/>
   <app-session-list *ngIf="!addMode" [sessions]="event?.sessions"></app-session-list>
-  <app-create-session *ngIf="addMode"></app-create-session>
+  <app-create-session *ngIf="addMode" (saveNewSession)="saveNewSession($event)"></app-create-session>
 </div>
