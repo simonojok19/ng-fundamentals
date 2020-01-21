@@ -11,4 +11,8 @@ export class CreateEventComponent {
   cancel() {
     this.router.navigate(['/events']).then(r => console.log(r)).catch(e => console.log(e));
   }
+
+  saveEvent(formValues: any) {
+    console.log(formValues);
+  }
 }
