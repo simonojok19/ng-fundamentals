@@ -44,7 +44,7 @@ export class SessionListComponent implements OnChanges{
   }
 
   userHasVoted(session: ISession) {
-
+    return this.voterService.userHasVoted(session, this.authService.currentUser.userName);
   }
 }
 
