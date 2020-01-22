@@ -20,6 +20,7 @@ import {CreateSessionComponent} from './events/event-details/create-session.comp
 import {SessionListComponent} from './events/event-details/session-list.component';
 import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {DurationPipe} from './events/shared/duration.pipe';
+import {SimpleModalComponent} from './common/simple-modal.component';
 
 declare let toastr: Toastr;
 // @ts-ignore
@@ -37,6 +38,7 @@ declare let jquery: any = window.$;
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
+    SimpleModalComponent,
   ],
   imports: [
     BrowserModule,
