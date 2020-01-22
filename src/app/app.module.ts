@@ -23,6 +23,7 @@ import {DurationPipe} from './events/shared/duration.pipe';
 import {SimpleModalComponent} from './common/simple-modal.component';
 import {JQ_TOKEN} from './common/jquery.service';
 import {ModalTriggerDirective} from './common/modal-trigger.directive';
+import {UpVoteComponent} from './events/event-details/up-vote.component';
 
 declare let toastr: Toastr;
 // @ts-ignore
@@ -42,6 +43,7 @@ const jquery = window['$'];
     DurationPipe,
     SimpleModalComponent,
     ModalTriggerDirective,
+    UpVoteComponent,
   ],
   imports: [
     BrowserModule,
