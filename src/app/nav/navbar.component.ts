@@ -15,7 +15,12 @@ import {Router} from '@angular/router';
   `]
 })
 export class NavBarComponent {
+  searchTerm: string;
   constructor(public authService: AuthService) {
     console.log(authService.isAuthenticated());
+  }
+
+  searchSession(searchTerm: any) {
+
   }
 }
