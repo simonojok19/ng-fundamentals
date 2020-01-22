@@ -22,6 +22,8 @@ import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {DurationPipe} from './events/shared/duration.pipe';
 
 declare let toastr: Toastr;
+// @ts-ignore
+declare let jquery: any = window.$;
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +50,7 @@ declare let toastr: Toastr;
     { provide: EventRouteActivator, useClass: EventRouteActivator },
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
     EventListResolver,
-    { provide: AuthService, useClass: AuthService }
+    { provide: AuthService, useClass: AuthService },
   ],
   bootstrap: [AppComponent]
 })
