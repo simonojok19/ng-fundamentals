@@ -6,7 +6,7 @@ import { EventsListComponent } from './events/events-list.component';
 import { EventThumbnailComponent } from './events/event-thumbnail.component';
 import { NavBarComponent } from './nav/navbar.component';
 import { EventService } from './events/shared/event.service';
-import { TOASTR_TOKEN } from './common/toastr.service';
+import {Toastr, TOASTR_TOKEN} from './common/toastr.service';
 import { EventDetailsComponent } from './events/event-details/event-details.component';
 import { RouterModule } from '@angular/router';
 import {appRoutes} from './routes';
@@ -21,7 +21,7 @@ import {SessionListComponent} from './events/event-details/session-list.componen
 import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {DurationPipe} from './events/shared/duration.pipe';
 
-declare let toastr: any;
+declare let toastr: Toastr;
 @NgModule({
   declarations: [
     AppComponent,
