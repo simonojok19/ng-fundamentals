@@ -3,7 +3,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({
   name: 'duration'
 })
-export class DurationPip implements PipeTransform {
+export class DurationPipe implements PipeTransform {
   transform(value: number): string {
     switch (value) {
       case 1: return 'Half Hour';
