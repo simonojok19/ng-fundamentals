@@ -6,9 +6,9 @@ import {ISession} from '../shared/event.model';
   templateUrl: './session-list.component.html'
 })
 export class SessionListComponent implements OnChanges{
-  @Input() sessions: ISession;
+  @Input() sessions: ISession[];
   @Input() filterBy: string;
-  visibleSessions: ISession;
+  visibleSessions: ISession[];
 
   ngOnChanges(): void {
     if (this.sessions) {
@@ -18,9 +18,11 @@ export class SessionListComponent implements OnChanges{
 
   private filterSession(filter: string) {
     if (filter === 'all') {
-
+      this.visibleSessions = this.sessions.slice(0);
     } else {
-
+      this.visibleSessions = this.sessions.filter( session => {
+        return session.level.toLocaleLowerCase() === filter;
+      });
     }
   }
 }
