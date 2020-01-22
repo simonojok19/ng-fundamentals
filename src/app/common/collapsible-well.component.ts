@@ -12,7 +12,6 @@ import {Component, Input} from "@angular/core";
   `
 })
 export class CollapsibleWellComponent {
-  @Input() title: string;
   visible: boolean;
   toggleContent() {
     this.visible = !this.visible;
