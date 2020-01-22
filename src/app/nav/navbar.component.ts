@@ -24,7 +24,6 @@ export class NavBarComponent {
   }
 
   searchSession(searchTerm: any) {
-    console.log(searchTerm, "============");
     this.eventService.searchSession(searchTerm).subscribe( sessions => {
       this.foundSessions = sessions;
       console.log(sessions);
