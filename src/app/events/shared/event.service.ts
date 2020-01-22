@@ -26,6 +26,10 @@ export class EventService {
     const index = EVENTS.findIndex(x => x.id === event.id);
     EVENTS[index] = event;
   }
+
+  searchSession(searchTerm: any) {
+
+  }
 }
 
 const EVENTS: IEvent[] = [
