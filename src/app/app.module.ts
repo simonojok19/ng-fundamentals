@@ -24,6 +24,7 @@ import {SimpleModalComponent} from './common/simple-modal.component';
 import {JQ_TOKEN} from './common/jquery.service';
 import {ModalTriggerDirective} from './common/modal-trigger.directive';
 import {UpVoteComponent} from './events/event-details/up-vote.component';
+import {VoterService} from './events/event-details/voter.service';
 
 declare let toastr: Toastr;
 // @ts-ignore
@@ -59,6 +60,7 @@ const jquery = window['$'];
     EventListResolver,
     { provide: AuthService, useClass: AuthService },
     { provide: JQ_TOKEN, useValue: jquery },
+    { provide: VoterService, useClass: VoterService }
   ],
   bootstrap: [AppComponent]
 })
