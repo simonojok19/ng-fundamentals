@@ -10,7 +10,9 @@ export class ModalTriggerDirective implements OnInit {
     this.htmlElement = elementRef.nativeElement;
   }
   ngOnInit(): void {
-    this.$('#simple-modal').modal({});
+    this.htmlElement.addEventListener('click', (event) => {
+      this.$('#simple-modal').modal({});
+    });
   }
 
 }
