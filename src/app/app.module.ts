@@ -25,7 +25,7 @@ import {JQ_TOKEN} from './common/jquery.service';
 
 declare let toastr: Toastr;
 // @ts-ignore
-declare let jquery: any = window.$;
+const jquery = window['$'];
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,11 +54,15 @@ declare let jquery: any = window.$;
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
     EventListResolver,
     { provide: AuthService, useClass: AuthService },
-    { provide: JQ_TOKEN, useClass: jquery },
+    { provide: JQ_TOKEN, useValue: jquery },
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+  constructor() {
+    // console.log(jquery);
+  }
+}
 
 export function checkDirtyState(component: CreateEventComponent) {
   if (component.isDirty) {
