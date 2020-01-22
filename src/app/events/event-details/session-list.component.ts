@@ -12,7 +12,7 @@ export class SessionListComponent implements OnChanges{
   @Input() filterBy: string;
   @Input() sortBy: string;
   visibleSessions: ISession[];
-  constructor(private authService: AuthService, private voterService: VoterService) {}
+  constructor(public authService: AuthService, private voterService: VoterService) {}
 
   ngOnChanges(): void {
     if (this.sessions) {
