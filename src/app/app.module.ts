@@ -48,7 +48,7 @@ declare let toastr: Toastr;
     { provide: EventRouteActivator, useClass: EventRouteActivator },
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
     EventListResolver,
-    AuthService
+    { provide: AuthService, useClass: AuthService }
   ],
   bootstrap: [AppComponent]
 })
