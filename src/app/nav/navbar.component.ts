@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {AuthService} from '../user/auth.service';
 import {Router} from '@angular/router';
+import {ISession} from '../events/shared/event.model';
+import {EventService} from '../events/shared/event.service';
 
 @Component({
   selector: 'app-navbar',
@@ -16,7 +18,8 @@ import {Router} from '@angular/router';
 })
 export class NavBarComponent {
   searchTerm: string;
-  constructor(public authService: AuthService) {
+  foundSessions: ISession[];
+  constructor(public authService: AuthService, private eventService: EventService) {
     console.log(authService.isAuthenticated());
   }
 
