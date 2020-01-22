@@ -19,7 +19,7 @@ export class LocationValidatorDirective implements Validator {
     ) || (onlineUrlControl && onlineUrlControl.value)) {
       return null;
     } else {
-      return {validateLocation: false};
+      return {appValidateLocation: false};
     }
   }
 

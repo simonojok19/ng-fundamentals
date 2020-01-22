@@ -25,6 +25,7 @@ import {JQ_TOKEN} from './common/jquery.service';
 import {ModalTriggerDirective} from './common/modal-trigger.directive';
 import {UpVoteComponent} from './events/event-details/up-vote.component';
 import {VoterService} from './events/event-details/voter.service';
+import {LocationValidatorDirective} from './events/location-validator.directive';
 
 declare let toastr: Toastr;
 // @ts-ignore
@@ -45,6 +46,7 @@ const jquery = window['$'];
     SimpleModalComponent,
     ModalTriggerDirective,
     UpVoteComponent,
+    LocationValidatorDirective
   ],
   imports: [
     BrowserModule,
