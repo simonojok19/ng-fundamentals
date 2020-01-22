@@ -22,6 +22,7 @@ import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {DurationPipe} from './events/shared/duration.pipe';
 import {SimpleModalComponent} from './common/simple-modal.component';
 import {JQ_TOKEN} from './common/jquery.service';
+import {ModalTriggerDirective} from './common/modal-trigger.directive';
 
 declare let toastr: Toastr;
 // @ts-ignore
@@ -40,6 +41,7 @@ const jquery = window['$'];
     CollapsibleWellComponent,
     DurationPipe,
     SimpleModalComponent,
+    ModalTriggerDirective,
   ],
   imports: [
     BrowserModule,
