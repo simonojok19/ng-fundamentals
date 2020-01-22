@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-simple-model',
+  selector: 'app-simple-modal',
   template: `
     <div id="simple-modal" class="modal fade" tabindex="-1">
         <div class="modal-dialog">

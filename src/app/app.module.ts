@@ -21,6 +21,7 @@ import {SessionListComponent} from './events/event-details/session-list.componen
 import {CollapsibleWellComponent} from './common/collapsible-well.component';
 import {DurationPipe} from './events/shared/duration.pipe';
 import {SimpleModalComponent} from './common/simple-modal.component';
+import {JQ_TOKEN} from './common/jquery.service';
 
 declare let toastr: Toastr;
 // @ts-ignore
@@ -53,6 +54,7 @@ declare let jquery: any = window.$;
     { provide: 'canDeactivateCreateEvent', useValue: checkDirtyState },
     EventListResolver,
     { provide: AuthService, useClass: AuthService },
+    { provide: JQ_TOKEN, useClass: jquery },
   ],
   bootstrap: [AppComponent]
 })
